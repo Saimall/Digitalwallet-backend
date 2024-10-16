@@ -36,7 +36,6 @@ public class Usercontroller {
 	
 	
 	
-	
 	@PostMapping("/add")
 	public AccessGuard adduser(@RequestBody AccessGuard accessGuard){
 		return userservice.adduser(accessGuard);

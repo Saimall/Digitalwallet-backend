@@ -26,7 +26,7 @@ public class SecurityConfig {
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-		http.csrf(customizer->customizer.disable()).authorizeHttpRequests(request->request.requestMatchers("/user/add","/user/login","/user/validate").permitAll().anyRequest().authenticated()).formLogin(Customizer.withDefaults()).httpBasic(Customizer.withDefaults()).oauth2Login(Customizer.withDefaults());
+		http.csrf(customizer->customizer.disable()).authorizeHttpRequests(request->request.anyRequest().permitAll()).formLogin(Customizer.withDefaults()).httpBasic(Customizer.withDefaults()).oauth2Login(Customizer.withDefaults());
 		
 		return http.build();
 	}
