@@ -36,7 +36,7 @@ public class Ottcontrollers {
 	@GetMapping("/get/{id}")
 	public List<Ottdetails> getottcards(@PathVariable int id) {
 		
-		System.out.println("The userid: "+id);
+		System.out.println("The family: "+id);
 		
 		return otTservices.getottdetails(id);
 		

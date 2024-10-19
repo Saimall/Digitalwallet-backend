@@ -22,7 +22,7 @@ public class Atmservices {
 	}
 
 	public List<Atmcards> getatmcards(int id) {
-		return  atmrepository.findByUserid(id);
+		return  atmrepository.findByFamilyid(id);
 	}
 
 	public void deletecard(int number) {
@@ -36,7 +36,7 @@ public class Atmservices {
 		cAtmcards.setEntityname(atmcards.getEntityname());
 		cAtmcards.setExpireDate(atmcards.getExpireDate());
 	    cAtmcards.setIssueDate(atmcards.getIssueDate());
-	    cAtmcards.setUserid(atmcards.getUserid());
+	    cAtmcards.setFamilyid(atmcards.getFamilyid());
 	    cAtmcards.setUsername(atmcards.getUsername());
 	    cAtmcards.setCvv(atmcards.getCvv());
 	    

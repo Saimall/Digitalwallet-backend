@@ -1,8 +1,7 @@
 package com.example.owner.models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
@@ -11,17 +10,17 @@ import jakarta.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Layout {
 	
-	private int userid;
+	private int familyid;
 	
 	@Id
 	private int number;
 	
 	private String entityname;
 	
-	public Layout(int number2, String entityName2,int userid) {
+	public Layout(int number2, String entityName2,int familyid) {
 		this.number=number2;
 		this.entityname = entityName2;
-		this.userid=userid;
+		this.familyid=familyid;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -29,13 +28,13 @@ public class Layout {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getUserid() {
-		return userid;
+	public int getFamilyid() {
+		return familyid;
 	}
 
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setFamilyid(int familyid) {
+		this.familyid = familyid;
 	}
 
 	

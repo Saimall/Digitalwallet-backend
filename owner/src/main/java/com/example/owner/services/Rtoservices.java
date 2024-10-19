@@ -21,7 +21,7 @@ public class Rtoservices {
 	}
 
 	public List<Rto> getrtocards(int id) {
-		return rtorepository.findByUserid(id);
+		return rtorepository.findByFamilyid(id);
 	}
 
 	public void deletecard(int number) {
@@ -37,7 +37,7 @@ public class Rtoservices {
 		rto2.setEntityname(rto.getEntityname());
 		rto2.setNumber(rto.getNumber());
 		
-		rto2.setUserid(rto.getUserid());
+		rto2.setFamilyid(rto.getFamilyid());
 		
 		return rtorepository.save(rto2);
 	}

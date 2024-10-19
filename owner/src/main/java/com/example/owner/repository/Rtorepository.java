@@ -9,7 +9,7 @@ import com.example.owner.models.Rto;
 @Repository
 public interface Rtorepository extends BaseRepository<Rto, Integer> {
 
-	List<Rto> findByUserid(int id);
+	List<Rto> findByFamilyid(int id);
 
 	Rto findByNumber(int number);
 

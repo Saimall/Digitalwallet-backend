@@ -10,7 +10,7 @@ import com.example.owner.models.HeatlthCard;
 @Repository
 public interface HelathcardsRepository extends JpaRepository<HeatlthCard, Integer> {
 
-	List<HeatlthCard> findByUserid(int id);
+	List<HeatlthCard> findByFamilyid(int id);
 
 	HeatlthCard findByNumber(int number);
 

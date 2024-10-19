@@ -9,7 +9,7 @@ import com.example.owner.models.Ottdetails;
 @Repository
 public interface Ottdetailsrepository  extends BaseRepository<Ottdetails, Integer>{
 
-	List<Ottdetails> findByUserid(int id);
+	List<Ottdetails> findByFamilyid(int id);
 
 	Ottdetails findByNumber(int number);
 

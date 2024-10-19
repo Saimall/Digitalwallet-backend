@@ -38,7 +38,7 @@ public class Filescontrollers {
 			@GetMapping("/get/{id}")
 			public List<Files> getfiles(@PathVariable int id) {
 				
-				System.out.println("The userid: "+id);
+				System.out.println("The family: "+id);
 				
 				return filesservices.getfiles(id);
 				
@@ -56,13 +56,5 @@ public class Filescontrollers {
 			}
 			
 			
-			
-			
-
-
-
 		
-		
-	
-
 }

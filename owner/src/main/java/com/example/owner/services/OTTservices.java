@@ -19,7 +19,7 @@ public class OTTservices {
 	}
 
 	public List<Ottdetails> getottdetails(int id) {
-		return ottdetailsrepository.findByUserid(id);
+		return ottdetailsrepository.findByFamilyid(id);
 	}
 
 	public void deleteottdetails(int number) {
@@ -36,7 +36,7 @@ public class OTTservices {
 		
 		newottdetails.setNumber(ottdetails.getNumber());
 		
-		newottdetails.setUserid(ottdetails.getUserid());
+		newottdetails.setFamilyid(ottdetails.getFamilyid());
 		
         newottdetails.setExpiryDate(ottdetails.getExpiryDate());
         newottdetails.setUsername(ottdetails.getUsername());

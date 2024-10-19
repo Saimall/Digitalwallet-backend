@@ -25,7 +25,7 @@ public class Filesservices {
 	public List<Files> getfiles(int id) {
 		
 		
-		return filesrepository.findByUserid(id);
+		return filesrepository.findByFamilyid(id);
 	}
 
 	public void deletefile(int number) {
@@ -48,7 +48,7 @@ public class Filesservices {
 		
 		newfile.setNumber(file.getNumber());
 		
-		newfile.setUserid(file.getUserid());
+		newfile.setFamilyid(file.getFamilyid());
 		
 	return	filesrepository.save(newfile);
 		

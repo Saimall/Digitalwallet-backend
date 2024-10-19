@@ -37,7 +37,7 @@ public class Rtocontroller {
 	@GetMapping("/get/{id}")
 	public List<Rto> getrto(@PathVariable int id) {
 		
-		System.out.println("The userid: "+id);
+		System.out.println("The familyid"+id);
 		
 		return rtoservices.getrtocards(id);
 		

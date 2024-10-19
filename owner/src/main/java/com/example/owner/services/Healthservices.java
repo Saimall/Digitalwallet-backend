@@ -20,7 +20,7 @@ public class Healthservices {
 	}
 
 	public List<HeatlthCard> gethealthcards(int id) {
-		return helathcardsRepository.findByUserid(id);
+		return helathcardsRepository.findByFamilyid(id);
 	}
 
 	public void deletehealthcard(int number) {
@@ -42,9 +42,9 @@ public class Healthservices {
 		
 		heatlthCard2.setNumber(heatlthCard.getNumber());
 		heatlthCard2.setPolicynumber(heatlthCard.getPolicynumber());
-		heatlthCard2.setUserid(heatlthCard.getUserid());
+		heatlthCard2.setFamilyid(heatlthCard.getFamilyid());
 		
-		heatlthCard2.setUserid(heatlthCard.getUserid());
+
 		
 		return helathcardsRepository.save(heatlthCard2);
 	}

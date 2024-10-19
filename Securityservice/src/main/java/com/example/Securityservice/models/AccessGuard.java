@@ -13,15 +13,15 @@ public class AccessGuard {
 	private int id;
 	private String username;
 	private String password;
-	private String familyid;
+	private int familyid;
 	
-	public String getFamilyid() {
+	public int getFamilyid() {
 		return familyid;
 	}
 
 
 
-	public void setFamilyid(String familyid) {
+	public void setFamilyid(int familyid) {
 		this.familyid = familyid;
 	}
 

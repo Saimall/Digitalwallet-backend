@@ -37,7 +37,7 @@ public class Atmcardscontrollers {
 	@GetMapping("/get/{id}")
 	public List<Atmcards> getAtmcard(@PathVariable int id) {
 		
-		System.out.println("The userid: "+id);
+		System.out.println("The family: "+id);
 		
 		return atmservices.getatmcards(id);
 		

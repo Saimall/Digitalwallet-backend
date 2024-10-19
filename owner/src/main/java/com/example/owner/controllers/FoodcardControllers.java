@@ -37,7 +37,7 @@ public class FoodcardControllers {
 		@GetMapping("/get/{id}")
 		public List<Foodcards> getfoodcard(@PathVariable int id) {
 			
-			System.out.println("The userid: "+id);
+			System.out.println("The family: "+id);
 			
 			return foodcardservice.getfoodcards(id);
 			

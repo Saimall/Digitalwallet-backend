@@ -20,7 +20,7 @@ public class Foodcardservice {
 	}
 
 	public List<Foodcards> getfoodcards(int id) {
-		return foodcardsrepository.findByUserid(id);
+		return foodcardsrepository.findByFamilyid(id);
 	}
 
 	public void deletecard(int number) {
@@ -36,7 +36,7 @@ public class Foodcardservice {
 	card.setExpireDate(foodcards.getExpireDate());
 	card.setIssueDate(foodcards.getIssueDate());
 	card.setNumber(foodcards.getNumber());
-	card.setUserid(foodcards.getUserid());
+	card.setFamilyid(foodcards.getFamilyid());
 	card.setUsername(foodcards.getUsername());
 	
 	
