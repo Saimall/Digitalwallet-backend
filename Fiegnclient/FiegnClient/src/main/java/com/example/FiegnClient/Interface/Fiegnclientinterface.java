@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.example.FiegnClient.DTOS.Atmpojo;
 
-@FeignClient(value = "Securityservice",url = "http://localhost:8060/user")
+@FeignClient(value = "Securityservice",url = "http://localhost:9097")
 public interface Fiegnclientinterface {
 	
 	
 	
 	
-	@GetMapping("/get")
+	@GetMapping("user/get")
 	public List<?> getusers();
 	
 	

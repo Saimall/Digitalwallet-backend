@@ -16,6 +16,7 @@ public class Rto extends Layout {
 
 	private Date expireDate;
 	private String username; 
+	
 	public Date getIssueDate() {
 		return issueDate;
 	}
