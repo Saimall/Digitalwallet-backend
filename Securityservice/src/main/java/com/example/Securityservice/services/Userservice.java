@@ -22,10 +22,16 @@ public class Userservice {
 	
 	
 
-	public AccessGuard adduser(AccessGuard accessGuard) {
+	public AccessGuard adduser(AccessGuard accessGuard) throws Exception {
+		if(userrepository.existsByFamilyid(accessGuard.getFamilyid())) {
+			throw new Exception("FamilyID already present kindly choose differnt FamilyID");
+		}
+		else {
+		
 		accessGuard.setPassword(passwordEncoder.encode(accessGuard.getPassword()));
 		
 		return userrepository.save(accessGuard);
+		}
 	}
 
 

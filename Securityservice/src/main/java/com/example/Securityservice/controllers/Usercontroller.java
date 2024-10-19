@@ -54,7 +54,7 @@ public class Usercontroller {
 	
 	
 	@PostMapping("/add")
-	public AccessGuard adduser(@RequestBody AccessGuard accessGuard){
+	public AccessGuard adduser(@RequestBody AccessGuard accessGuard) throws Exception{
 		return userservice.adduser(accessGuard);
 		
 	}
