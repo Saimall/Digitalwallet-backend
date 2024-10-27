@@ -16,7 +16,7 @@ import com.example.Securityservice.DTOS.Rtopojo;
 
 
 //change to 9060 will work direct to service
-@FeignClient(value = "owner" , url= "http://localhost:9096")
+@FeignClient(value = "owner" , url= "http://localhost:8060")
 public interface FiegnclientInterface {
 
 	

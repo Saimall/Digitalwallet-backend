@@ -11,7 +11,7 @@ import com.example.owner.models.Atmcards;
 public interface Atmrepository extends BaseRepository<Atmcards, Integer>{
 	Atmcards findByNumber(int number);
 
-	List<Atmcards> findByFamilyid(int id);
+	List<Atmcards> findByFamilyid(int familyid);
 
 
 

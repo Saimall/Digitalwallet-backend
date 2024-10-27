@@ -1,8 +1,10 @@
 package com.example.Securityservice.repository;
 
-import java.util.List;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
@@ -13,7 +15,10 @@ public interface Userrepository extends JpaRepository<AccessGuard, Integer> {
 
 	AccessGuard findByUsername(String username);
 	
-	 boolean existsByFamilyid(Integer familyid);
+	 boolean existsByFamilyid(String string);
+
+	@Query("SELECT a.familyid FROM AccessGuard a WHERE a.username = :username")
+	Integer findFamilyIdByUsername(@Param("username") String username);
 	
 	
 

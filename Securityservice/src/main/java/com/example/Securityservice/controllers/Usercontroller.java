@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +34,7 @@ import com.example.Securityservice.services.Userservice;
 
 @RestController
 @RequestMapping("/user")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class Usercontroller {
 	
 	
@@ -68,15 +69,24 @@ public class Usercontroller {
    
    
    @PostMapping("/login")
-   public String loginuser(@RequestBody AccessGuard accessGuard) {
+   public ResponseEntity<?> loginuser(@RequestBody AccessGuard accessGuard) {
 	   System.out.print("Username : "+accessGuard);
 	   
 	   Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(accessGuard.getUsername(), accessGuard.getPassword()));
-	   
+	 
 	   if(authentication.isAuthenticated()) {
-		   return userservice.generateToken(accessGuard.getUsername());
+		   
+		   Integer familyid = userservice.getfamilyidbyusername(accessGuard.getUsername());
+	        
+	        
+	        Map<String, Object> response = new HashMap<>();
+	        response.put("message", userservice.generateToken(accessGuard.getUsername()));
+	        response.put("familyid", familyid); 
+	        return new ResponseEntity<>(response, HttpStatus.OK);
+		   
+		   
 	   }
-	   return null;
+	   return ResponseEntity.noContent().build();
 	   
    }
    

@@ -39,14 +39,20 @@ public class Healthservices {
 		heatlthCard2.setExpireDate(heatlthCard.getExpireDate());
 		
 		heatlthCard2.setIssueDate(heatlthCard.getIssueDate());
-		
+		heatlthCard2.setUsername(heatlthCard.getUsername());
 		heatlthCard2.setNumber(heatlthCard.getNumber());
 		heatlthCard2.setPolicynumber(heatlthCard.getPolicynumber());
 		heatlthCard2.setFamilyid(heatlthCard.getFamilyid());
 		
+		System.out.println(heatlthCard2);
+		
 
 		
 		return helathcardsRepository.save(heatlthCard2);
+	}
+
+	public HeatlthCard gethealthcardynumber(int number) {
+		return helathcardsRepository.findByNumber(number);
 	}
 
 	

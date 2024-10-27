@@ -55,5 +55,16 @@ public class Rtocontroller {
 	}
 	
 	
+	@GetMapping("/getbynumber/{number}")
+	public Rto getrtobynumber(@PathVariable int number) {
+		
+		System.out.println("The familyid"+number);
+		
+		return rtoservices.getrtocardbynumber(number);
+		
+	}
+	
+	
+	
 
 }

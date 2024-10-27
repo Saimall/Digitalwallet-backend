@@ -44,6 +44,10 @@ public class Foodcardservice {
 	
 	
 	}
+
+	public Foodcards getfoodcardbynumber(int number) {
+		return foodcardsrepository.findByNumber(number);
+	}
 	
 	
 	

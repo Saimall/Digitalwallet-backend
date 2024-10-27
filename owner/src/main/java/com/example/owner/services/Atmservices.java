@@ -21,8 +21,8 @@ public class Atmservices {
 		return atmrepository.save(atmcards);
 	}
 
-	public List<Atmcards> getatmcards(int id) {
-		return  atmrepository.findByFamilyid(id);
+	public List<Atmcards> getatmcards(int familyid) {
+		return  atmrepository.findByFamilyid(familyid);
 	}
 
 	public void deletecard(int number) {
@@ -43,6 +43,11 @@ public class Atmservices {
 	    
 	    
 		return atmrepository.save(cAtmcards);
+	}
+
+	public Atmcards getBynumber(int number) {
+		
+		return atmrepository.findByNumber(number);
 	}
 	
 	

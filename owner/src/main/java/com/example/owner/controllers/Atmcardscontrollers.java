@@ -34,12 +34,12 @@ public class Atmcardscontrollers {
 	}
 	
 	
-	@GetMapping("/get/{id}")
-	public List<Atmcards> getAtmcard(@PathVariable int id) {
+	@GetMapping("/get/{familyid}")
+	public List<Atmcards> getAtmcard(@PathVariable int familyid) {
 		
-		System.out.println("The family: "+id);
+		System.out.println("The family: "+familyid);
 		
-		return atmservices.getatmcards(id);
+		return atmservices.getatmcards(familyid);
 		
 	}
 	
@@ -52,6 +52,12 @@ public class Atmcardscontrollers {
 	@PutMapping("/update/{number}")
 	public Atmcards updateAtmcards(@PathVariable int number, @RequestBody Atmcards atmcards) {
 		return atmservices.updatecard(number,atmcards);
+	}
+	
+	
+	@GetMapping("/getbynumber/{number}")
+	public Atmcards getAtmcardbynumber(@PathVariable int number) {
+		return atmservices.getBynumber(number);
 	}
 	
 	

@@ -52,6 +52,11 @@ public class Userservice {
 	public String generateToken(String username) {
 		return JWTservice.generatetoken(username);
 	}
+	
+	
+	public Integer getfamilyidbyusername(String username) {
+		return userrepository.findFamilyIdByUsername(username);
+	}
 
 
 

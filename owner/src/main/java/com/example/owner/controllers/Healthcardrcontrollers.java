@@ -56,6 +56,16 @@ public class Healthcardrcontrollers {
 	}
 	
 	
+	@GetMapping("/getbynumber/{number}")
+	public HeatlthCard gethealthcardbynumber(@PathVariable int number) {
+		
+		System.out.println("The family: "+number);
+		
+		return healthservices.gethealthcardynumber(number);
+		
+	}
+	
+	
 	
 	
 	

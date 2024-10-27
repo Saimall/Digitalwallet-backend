@@ -42,4 +42,8 @@ public class Rtoservices {
 		return rtorepository.save(rto2);
 	}
 
+	public Rto getrtocardbynumber(int number) {
+		return rtorepository.findByNumber(number);
+	}
+
 }

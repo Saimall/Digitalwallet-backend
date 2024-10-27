@@ -46,6 +46,10 @@ public class OTTservices {
         return ottdetailsrepository.save(newottdetails);
         
 	}
+
+	public Ottdetails getBynumber(int number) {
+		return ottdetailsrepository.findByNumber(number);
+	}
 	
 	
 

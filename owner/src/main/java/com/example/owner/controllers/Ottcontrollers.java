@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.owner.models.Atmcards;
 import com.example.owner.models.Ottdetails;
 import com.example.owner.services.OTTservices;
 
@@ -53,6 +54,11 @@ public class Ottcontrollers {
 		return otTservices.updateottdetails(number,ottdetails);
 	}
 	
+	
+	@GetMapping("/getbynumber/{number}")
+	public Ottdetails getOttcardbynumber(@PathVariable int number) {
+		return otTservices.getBynumber(number);
+	}
 	
 	
 	

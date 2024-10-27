@@ -55,6 +55,18 @@ public class FoodcardControllers {
 		}
 		
 		
+		@GetMapping("/getbynumber/{number}")
+	     public Foodcards getfoodcardbynumber(@PathVariable int number) {
+			
+			System.out.println("The family: "+number);
+			
+			return foodcardservice.getfoodcardbynumber(number);
+			
+		}
+		
+		
+		
+		
 		
 		
 
