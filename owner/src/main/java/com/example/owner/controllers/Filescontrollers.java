@@ -61,5 +61,15 @@ public class Filescontrollers {
 			}
 			
 			
+			@GetMapping("/getbynumber/{number}")
+			public Files getfilebynumber(@PathVariable int number) {
+				
+				System.out.println("The family: "+number);
+				
+				return filesservices.getfilebynumber(number);
+				
+			}
+			
+			
 		
 }

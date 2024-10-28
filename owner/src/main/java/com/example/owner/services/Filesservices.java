@@ -78,6 +78,10 @@ public class Filesservices {
 		
 		
 	}
+
+	public Files getfilebynumber(int number) {
+		return filesrepository.findByNumber(number);
+	}
 	
 	
 	
