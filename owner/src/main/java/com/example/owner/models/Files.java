@@ -1,5 +1,7 @@
 package com.example.owner.models;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Lob;
 
@@ -74,8 +76,8 @@ public class Files extends Layout {
 			return imageData;
 		}
 
-		public void setImageData(String imagedata) {
-			this.imageData = imagedata;
+		public void setImageData(String string) {
+			this.imageData = string;
 		}
 	
 
