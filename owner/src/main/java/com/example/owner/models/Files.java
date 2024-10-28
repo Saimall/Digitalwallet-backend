@@ -1,6 +1,7 @@
 package com.example.owner.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Lob;
 
 
 
@@ -18,10 +19,33 @@ public class Files extends Layout {
 	
 	private String name;
 	
+	  
+	
+	
+
+	private  String imageType;
+
+	    @Lob 
+	    private String imageData;
+	    
+	    private String cloudinaryPublicId; 
+	    
+	    
+	    public String getCloudinaryPublicId() {
+			return cloudinaryPublicId;
+		}
+
+		public void setCloudinaryPublicId(String cloudinaryPublicId) {
+			this.cloudinaryPublicId = cloudinaryPublicId;
+		}
+
+		
+	
 	public Files(int userid, int number, String entityName, String description, String name) {
         super(number, entityName,userid);
         this.description = description;
         this.name = name;
+       
     }
 	
 	public String getDescription() {
@@ -36,6 +60,23 @@ public class Files extends Layout {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
+	 public String getImageType() {
+			return imageType;
+		}
+
+		public void setImageType(String imageType) {
+			this.imageType = imageType;
+		}
+
+		public String getImageData() {
+			return imageData;
+		}
+
+		public void setImageData(String imagedata) {
+			this.imageData = imagedata;
+		}
 	
 
 }

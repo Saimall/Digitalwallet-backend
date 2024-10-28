@@ -21,11 +21,13 @@ public class Layout {
 		this.number=number2;
 		this.entityname = entityName2;
 		this.familyid=familyid;
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Layout() {
-		// TODO Auto-generated constructor stub
+		
+		
+		
 	}
 
 	public int getFamilyid() {
