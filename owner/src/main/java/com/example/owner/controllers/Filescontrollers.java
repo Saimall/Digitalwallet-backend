@@ -32,20 +32,20 @@ public class Filescontrollers {
 			private Filesservices filesservices;
 			
 			@PostMapping("/add")
-			public ResponseEntity<?>addfiles(@ModelAttribute Files files, @RequestPart("pdfFile") MultipartFile pdFile) throws IOException {
+			public ResponseEntity<?>addfiles(@ModelAttribute Files files, @RequestPart("pdfFile") MultipartFile pdfFile) throws IOException {
 				
 				
-				return new ResponseEntity<>(filesservices.addfile(files,pdFile),HttpStatus.OK);
+				return new ResponseEntity<>(filesservices.addfile(files,pdfFile),HttpStatus.OK);
 				
 			}
 			
 			
-			@GetMapping("/get/{id}")
-			public List<Files> getfiles(@PathVariable int id) {
+			@GetMapping("/get/{familyid}")
+			public List<Files> getfiles(@PathVariable int familyid) {
 				
-				System.out.println("The family: "+id);
+				System.out.println("The family: "+familyid);
 				
-				return filesservices.getfiles(id);
+				return filesservices.getfiles(familyid);
 				
 			}
 			

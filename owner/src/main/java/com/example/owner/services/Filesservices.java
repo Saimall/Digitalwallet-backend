@@ -37,10 +37,10 @@ public class Filesservices {
 		
 	}
 
-	public List<Files> getfiles(int id) {
+	public List<Files> getfiles(int familyid) {
 		
 		
-		return filesrepository.findByFamilyid(id);
+		return filesrepository.findByFamilyid(familyid);
 	}
 
 	public void deletefile(int number) {

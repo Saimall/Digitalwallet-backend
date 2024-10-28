@@ -9,7 +9,7 @@ import com.example.owner.models.Files;
 @Repository
 public interface Filesrepository extends BaseRepository<Files, Integer> {
 
-	List<Files> findByFamilyid(int id);
+	List<Files> findByFamilyid(int familyid);
 
 	Files findByNumber(int number);
 
