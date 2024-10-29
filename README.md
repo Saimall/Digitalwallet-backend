@@ -10,7 +10,6 @@ A secure and scalable digital wallet application built using Spring Boot, Micros
 - [Getting Started](#getting-started)
 - [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
